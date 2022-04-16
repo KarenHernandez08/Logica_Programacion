@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+
+<h1>Calculo de mundiales </h1>
+
+<script>
+    function saltarLinea() {
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+   
+    var primermundial=1930;
+    var limite=parseInt(prompt("Ingrese el año a calcular el mundial: "))
+
+  
+
+    while(primermundial<=limite){
+        imprimir("Hubo mundial en el año"+primermundial);
+        primermundial=primermundial+4;
+
+
+    }
+
+    imprimir("fin")
+
+
+
+</script>
