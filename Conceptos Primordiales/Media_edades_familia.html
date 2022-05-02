@@ -1,6 +1,6 @@
 <meta charset="UTF-8">
 
-<h1>Calculo de mundiales </h1>
+<h1>Calculo de media de edades en familiares</h1>
 
 <script>
     function saltarLinea() {
@@ -11,6 +11,22 @@
         document.write(frase);
         saltarLinea();
     }
+
+    var numMiebros=parseInt(prompt("Ingrese la cantidad de miembros de su familia"));
+    var contador=1;
+    var totalEdades=0;
+
+    
+    while(contador<=numMiebros){
+        
+        edad=parseInt(prompt("Ingrese la edad de la familiar"))
+        totalEdades=totalEdades+edad;
+        contador++;
+
+    }
+    media=totalEdades/numMiebros;
+    imprimir("La media de las edades de la familia es: "+ media)
+    
    
     
 

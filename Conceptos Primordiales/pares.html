@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+
+<h1>Pares del 1 al 100</h1>
+
+<script>
+    function saltarLinea() {
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    
+    var contador = 2;
+    while(contador <= 100) {
+        imprimir(contador);
+        contador = contador + 2; // incrementar de dos en dos
+    }
+    imprimir("FIN");
+
+</script>
