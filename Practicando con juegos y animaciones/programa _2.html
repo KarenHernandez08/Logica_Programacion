@@ -1,0 +1,21 @@
+<canvas width="600" height="400">
+
+</canvas>
+<script>
+    function dibujar_cuadrado(){
+        var pantalla=document.querySelector("canvas");
+        var pincel= pantalla.getContext("2d");
+
+        pincel.fillStyle="green"//propiedad
+        pincel.fillRect(0,0,50,50)//funcion
+        pincel.strokeStyle="black"
+        pincel.strokeRect(0,0,50,50)
+
+    }
+dibujar_cuadrado()
+
+
+
+    //documentacion de canvas js
+</script>
+
