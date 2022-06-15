@@ -2,17 +2,30 @@
 
 </canvas>
 <script>
-    function dibujar_cuadrado(){
+    function dibujar_cuadrado(x,y, color){
         var pantalla=document.querySelector("canvas");
         var pincel= pantalla.getContext("2d");
 
-        pincel.fillStyle="green"//propiedad
-        pincel.fillRect(0,0,50,50)//funcion
+        pincel.fillStyle=color
+        pincel.fillRect(x,y,50,50)
         pincel.strokeStyle="black"
-        pincel.strokeRect(0,0,50,50)
+        pincel.strokeRect(x,y,50,50)
 
     }
-dibujar_cuadrado()
+/*
+    var x=0;
+    while(x<600){
+        dibujar_cuadrado(x,0,"green")
+        dibujar_cuadrado(x,50,"blue")
+        x=x+50
+    }
+*/
+
+    for(var x=0; x<600; x=x+50){
+        dibujar_cuadrado(x,0,"black")
+        dibujar_cuadrado(x,50,"pink")
+        
+    }
 
 
 
