@@ -1,0 +1,33 @@
+<canvas width="600" height="400">
+
+</canvas>
+<script>
+    var pantalla=document.querySelector("canvas");
+    var pincel= pantalla.getContext("2d");
+    pincel.fillStyle="black"
+    pincel.fillRect(0,0,600,400)
+
+    function circunferencia(x,y,radio){
+        pincel.fillStyle="pink"
+        pincel.beginPath()
+        pincel.arc(x,y,radio,0,2*Math.PI)
+        pincel.fill()
+
+
+    }
+    function limpiar(){
+        pincel.clearRect(0,0,600,400)
+
+    }
+    var x=0
+    function actualizar(){
+        limpiar()
+        circunferencia(x,20,10);
+        x++
+
+
+    }
+
+    setInterval(actualizar,10)
+
+</script>

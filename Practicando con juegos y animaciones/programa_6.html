@@ -1,0 +1,47 @@
+<canvas width="600" height="400">
+
+</canvas>
+<script>
+    var pantalla=document.querySelector("canvas");
+    var pincel= pantalla.getContext("2d");
+    pincel.fillStyle="white"
+    pincel.fillRect(0,0,600,400)
+
+    function circunferencia(x,y,radio,color){
+        pincel.fillStyle=color
+        pincel.beginPath()
+        pincel.arc(x,y,radio,0,2*Math.PI)
+        pincel.fill()
+
+
+    }
+    function limpiar(){
+        pincel.clearRect(0,0,600,400)
+
+    }
+    var x=0
+    function actualizar(){
+        limpiar()
+        circunferencia(x,20,10);
+        x++
+
+
+    }
+    var radio=10
+    function disenarObjetivo(x,y){
+        circunferencia(x,y,radio+40, "red")
+        circunferencia(x,y,radio+20, "white")
+        circunferencia(x,y,radio, "red")
+    }
+
+    function sorteo(maximo){
+        return Math.floor(Math.random()*maximo)
+    }
+    xAleatorio= sorteo(600);
+    yaleatorio= sorteo(400);
+
+    disenarObjetivo(xAleatorio,yaleatorio)
+
+    
+
+</script>
